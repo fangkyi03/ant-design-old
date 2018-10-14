@@ -31,7 +31,7 @@ export interface TransferProps {
   dataSource: TransferItem[];
   targetKeys?: string[];
   selectedKeys?: string[];
-  render?: (record: TransferItem) => React.ReactNode;
+  render?: (index: number,record: TransferItem) => React.ReactNode;
   onChange?: (targetKeys: string[], direction: string, moveKeys: any) => void;
   onSelectChange?: (sourceSelectedKeys: string[], targetSelectedKeys: string[]) => void;
   style?: React.CSSProperties;
@@ -386,7 +386,7 @@ export default class Transfer extends React.Component<TransferProps, any> {
           handleClear={this.handleLeftClear}
           handleSelect={this.handleLeftSelect}
           handleSelectAll={this.handleLeftSelectAll}
-          render={render}
+          render={(item) => render!(0,item)}
           showSearch={showSearch}
           body={body}
           footer={footer}
@@ -418,7 +418,7 @@ export default class Transfer extends React.Component<TransferProps, any> {
           handleClear={this.handleRightClear}
           handleSelect={this.handleRightSelect}
           handleSelectAll={this.handleRightSelectAll}
-          render={render}
+          render={(item)=>render!(1,item)}
           showSearch={showSearch}
           body={body}
           footer={footer}
