@@ -272,12 +272,12 @@ var Upload = function (_React$Component) {
         key: 'getDerivedStateFromProps',
         value: function getDerivedStateFromProps(nextProps) {
             if ('fileList' in nextProps) {
-                if (_typeof(nextProps.fileList) === 'object') {
+                if (Array.isArray(nextProps.fileList)) {
+                    return nextProps.fileList || [];
+                } else if (_typeof(nextProps.fileList) === 'object' && nextProps.fileList.fileList) {
                     return nextProps.fileList.fileList || [];
                 } else {
-                    return {
-                        fileList: nextProps.fileList || []
-                    };
+                    return [];
                 }
             }
             return null;
