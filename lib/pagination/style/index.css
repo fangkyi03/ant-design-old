@@ -233,6 +233,7 @@
 }
 .ant-pagination-options-size-changer.ant-select {
   display: inline-block;
+  width: auto;
   margin-right: 8px;
 }
 .ant-pagination-options-quick-jumper {

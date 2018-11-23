@@ -86,7 +86,7 @@ var Progress = function (_React$Component) {
                 }
                 progressInfo = React.createElement(
                     'span',
-                    { className: prefixCls + '-text' },
+                    { className: prefixCls + '-text', title: typeof text === 'string' ? text : undefined },
                     text
                 );
             }
@@ -131,7 +131,7 @@ var Progress = function (_React$Component) {
                 progress = React.createElement(
                     'div',
                     { className: prefixCls + '-inner', style: circleStyle },
-                    React.createElement(Circle, { percent: validProgress(percent), strokeWidth: circleWidth, trailWidth: circleWidth, strokeColor: statusColorMap[progressStatus], strokeLinecap: strokeLinecap, trailColor: trailColor, prefixCls: prefixCls, gapDegree: gapDeg, gapPosition: gapPos }),
+                    React.createElement(Circle, { percent: validProgress(percent), strokeWidth: circleWidth, trailWidth: circleWidth, strokeColor: strokeColor || statusColorMap[progressStatus], strokeLinecap: strokeLinecap, trailColor: trailColor, prefixCls: prefixCls, gapDegree: gapDeg, gapPosition: gapPos }),
                     progressInfo
                 );
             }

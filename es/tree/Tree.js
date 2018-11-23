@@ -41,6 +41,9 @@ var Tree = function (_React$Component) {
                 return React.createElement(Icon, { type: 'caret-down', className: prefixCls + '-switcher-icon', theme: 'filled' });
             }
         };
+        _this.setTreeRef = function (node) {
+            _this.tree = node;
+        };
         return _this;
     }
 
@@ -55,7 +58,7 @@ var Tree = function (_React$Component) {
             var checkable = props.checkable;
             return React.createElement(
                 RcTree,
-                _extends({}, props, { className: classNames(!showIcon && prefixCls + '-icon-hide', className), checkable: checkable ? React.createElement('span', { className: prefixCls + '-checkbox-inner' }) : checkable, switcherIcon: this.renderSwitcherIcon }),
+                _extends({ ref: this.setTreeRef }, props, { className: classNames(!showIcon && prefixCls + '-icon-hide', className), checkable: checkable ? React.createElement('span', { className: prefixCls + '-checkbox-inner' }) : checkable, switcherIcon: this.renderSwitcherIcon }),
                 this.props.children
             );
         }

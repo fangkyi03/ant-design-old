@@ -154,6 +154,8 @@ export default class Tree extends React.Component<TreeProps, any> {
             leave(node: HTMLElement, done: () => void): any;
         };
     };
+    tree: any;
     renderSwitcherIcon: ({ isLeaf, expanded, loading }: AntTreeNodeProps) => JSX.Element | null;
+    setTreeRef: (node: any) => void;
     render(): JSX.Element;
 }

@@ -35,6 +35,10 @@
 .ant-drawer-right.ant-drawer-open {
   width: 100%;
 }
+.ant-drawer-left.ant-drawer-open.no-mask,
+.ant-drawer-right.ant-drawer-open.no-mask {
+  width: 0%;
+}
 .ant-drawer-left.ant-drawer-open .ant-drawer-content-wrapper {
   -webkit-box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
@@ -58,6 +62,10 @@
 .ant-drawer-top.ant-drawer-open,
 .ant-drawer-bottom.ant-drawer-open {
   height: 100%;
+}
+.ant-drawer-top.ant-drawer-open.no-mask,
+.ant-drawer-bottom.ant-drawer-open.no-mask {
+  height: 0%;
 }
 .ant-drawer-top.ant-drawer-open .ant-drawer-content-wrapper {
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);

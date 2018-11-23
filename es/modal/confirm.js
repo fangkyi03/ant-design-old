@@ -26,7 +26,8 @@ var ConfirmDialog = function ConfirmDialog(props) {
 
     var iconType = props.iconType || 'question-circle';
     var okType = props.okType || 'primary';
-    var prefixCls = props.prefixCls || 'ant-confirm';
+    var prefixCls = props.prefixCls || 'ant-modal';
+    var contentPrefixCls = prefixCls + '-confirm';
     // 默认为 true，保持向下兼容
     var okCancel = 'okCancel' in props ? props.okCancel : true;
     var width = props.width || 416;
@@ -37,7 +38,7 @@ var ConfirmDialog = function ConfirmDialog(props) {
     var okText = props.okText || (okCancel ? runtimeLocale.okText : runtimeLocale.justOkText);
     var cancelText = props.cancelText || runtimeLocale.cancelText;
     var autoFocusButton = props.autoFocusButton === null ? false : props.autoFocusButton || 'ok';
-    var classString = classNames(prefixCls, prefixCls + '-' + props.type, props.className);
+    var classString = classNames(contentPrefixCls, contentPrefixCls + '-' + props.type, props.className);
     var cancelButton = okCancel && React.createElement(
         ActionButton,
         { actionFn: onCancel, closeModal: close, autoFocus: autoFocusButton === 'cancel', buttonProps: cancelButtonProps },
@@ -45,28 +46,28 @@ var ConfirmDialog = function ConfirmDialog(props) {
     );
     return React.createElement(
         Dialog,
-        { className: classString, wrapClassName: classNames(_defineProperty({}, prefixCls + '-centered', !!props.centered)), onCancel: close.bind(_this, { triggerCancel: true }), visible: visible, title: '', transitionName: 'zoom', footer: '', maskTransitionName: 'fade', maskClosable: maskClosable, style: style, width: width, zIndex: zIndex, afterClose: afterClose, keyboard: keyboard, centered: centered, getContainer: getContainer },
+        { prefixCls: prefixCls, className: classString, wrapClassName: classNames(_defineProperty({}, contentPrefixCls + '-centered', !!props.centered)), onCancel: close.bind(_this, { triggerCancel: true }), visible: visible, title: '', transitionName: 'zoom', footer: '', maskTransitionName: 'fade', maskClosable: maskClosable, style: style, width: width, zIndex: zIndex, afterClose: afterClose, keyboard: keyboard, centered: centered, getContainer: getContainer },
         React.createElement(
             'div',
-            { className: prefixCls + '-body-wrapper' },
+            { className: contentPrefixCls + '-body-wrapper' },
             React.createElement(
                 'div',
-                { className: prefixCls + '-body' },
+                { className: contentPrefixCls + '-body' },
                 React.createElement(Icon, { type: iconType }),
                 React.createElement(
                     'span',
-                    { className: prefixCls + '-title' },
+                    { className: contentPrefixCls + '-title' },
                     props.title
                 ),
                 React.createElement(
                     'div',
-                    { className: prefixCls + '-content' },
+                    { className: contentPrefixCls + '-content' },
                     props.content
                 )
             ),
             React.createElement(
                 'div',
-                { className: prefixCls + '-btns' },
+                { className: contentPrefixCls + '-btns' },
                 cancelButton,
                 React.createElement(
                     ActionButton,

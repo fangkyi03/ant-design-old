@@ -64,6 +64,7 @@ export interface OptionProps {
     children?: React.ReactNode;
     className?: string;
     key?: string;
+    style?: React.CSSProperties;
 }
 export interface OptGroupProps {
     label?: React.ReactNode;

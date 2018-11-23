@@ -121,6 +121,9 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+.ant-badge-not-a-wrapper {
+  vertical-align: middle;
+}
 .ant-badge-not-a-wrapper .ant-scroll-number {
   top: auto;
   display: block;

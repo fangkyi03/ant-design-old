@@ -82,8 +82,8 @@
   right: 6px;
   top: 50%;
   width: 14px;
-  height: 16px;
-  margin-top: -8px;
+  height: 17px;
+  margin-top: -8.5px;
   text-align: center;
   color: #bfbfbf;
   -webkit-transition: all .3s;
@@ -144,6 +144,13 @@
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-up:not(.on),
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-down:not(.on) {
   color: rgba(0, 0, 0, 0.45);
+}
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-sorters,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-filters {
+  padding-right: 30px;
+}
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-sorters.ant-table-column-has-filters {
+  padding-right: 54px;
 }
 .ant-table-thead > tr > th .ant-table-column-sorters:before {
   position: absolute;
@@ -641,6 +648,16 @@ tr.ant-table-expanded-row:hover {
 .ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th {
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
+}
+.ant-table-small > .ant-table-content > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-body > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-header > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-fixed-left > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th.ant-table-column-sort,
+.ant-table-small > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-thead > tr > th.ant-table-column-sort {
+  background: rgba(0, 0, 0, 0.01);
 }
 .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-header > table,
 .ant-table-small > .ant-table-content > .ant-table-scroll > .ant-table-body > table,

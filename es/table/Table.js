@@ -18,6 +18,7 @@ import * as ReactDOM from 'react-dom';
 import RcTable from 'rc-table';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
+import shallowEqual from 'shallowequal';
 import Pagination from '../pagination';
 import Icon from '../icon';
 import Spin from '../spin';
@@ -618,7 +619,7 @@ var Table = function (_React$Component) {
 
             var newSortOrder = void 0;
             // 切换另一列时，丢弃 sortOrder 的状态
-            var oldSortOrder = sortColumn === column ? sortOrder : undefined;
+            var oldSortOrder = sortColumn === column || shallowEqual(sortColumn, column) ? sortOrder : undefined;
             // 切换排序状态，按照降序/升序/不排序的顺序
             if (!oldSortOrder) {
                 newSortOrder = 'descend';
@@ -748,7 +749,7 @@ var Table = function (_React$Component) {
                 }
                 return _extends({}, column, { className: classNames(column.className, (_classNames3 = {}, _defineProperty(_classNames3, prefixCls + '-column-has-actions', sortButton || filterDropdown), _defineProperty(_classNames3, prefixCls + '-column-has-filters', filterDropdown), _defineProperty(_classNames3, prefixCls + '-column-has-sorters', sortButton), _defineProperty(_classNames3, prefixCls + '-column-sort', isSortColumn && sortOrder), _classNames3)), title: [React.createElement(
                         'div',
-                        { key: 'title', title: locale.sortTitle, className: sortButton ? prefixCls + '-column-sorters' : undefined, onClick: function onClick() {
+                        { key: 'title', title: sortButton ? locale.sortTitle : undefined, className: sortButton ? prefixCls + '-column-sorters' : undefined, onClick: function onClick() {
                                 return _this7.toggleSortOrder(column);
                             } },
                         _this7.renderColumnTitle(column.title),

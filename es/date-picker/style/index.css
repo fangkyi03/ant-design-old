@@ -90,7 +90,7 @@
 }
 .ant-calendar-picker-clear {
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.25);
   background: #fff;

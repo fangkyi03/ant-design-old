@@ -1,3 +1,4 @@
+import _typeof from 'babel-runtime/helpers/typeof';
 import _defineProperty from 'babel-runtime/helpers/defineProperty';
 import _extends from 'babel-runtime/helpers/extends';
 import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
@@ -271,9 +272,13 @@ var Upload = function (_React$Component) {
         key: 'getDerivedStateFromProps',
         value: function getDerivedStateFromProps(nextProps) {
             if ('fileList' in nextProps) {
-                return {
-                    fileList: nextProps.fileList || []
-                };
+                if (_typeof(nextProps.fileList) === 'object') {
+                    return nextProps.fileList.fileList || [];
+                } else {
+                    return {
+                        fileList: nextProps.fileList || []
+                    };
+                }
             }
             return null;
         }

@@ -41,9 +41,13 @@ class Upload extends React.Component<UploadProps, UploadState> {
 
   static getDerivedStateFromProps(nextProps: UploadProps) {
     if ('fileList' in nextProps) {
-      return {
-        fileList: nextProps.fileList || [],
-      };
+      if ( typeof nextProps.fileList === 'object') {
+        return (nextProps.fileList as any).fileList || []
+      }else {
+        return {
+          fileList: nextProps.fileList || [],
+        };
+      }
     }
     return null;
   }

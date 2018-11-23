@@ -1,12 +1,15 @@
 import _defineProperty from "babel-runtime/helpers/defineProperty";
+
+var _svgBaseProps;
+
 import warning from "../_util/warning";
 // These props make sure that the SVG behaviours like general text.
 // Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
-export var svgBaseProps = _defineProperty({
+export var svgBaseProps = (_svgBaseProps = {
     width: "1em",
     height: "1em",
     fill: "currentColor"
-}, "aria-hidden", "true");
+}, _defineProperty(_svgBaseProps, "aria-hidden", "true"), _defineProperty(_svgBaseProps, "focusable", "false"), _svgBaseProps);
 var fillTester = /-fill$/;
 var outlineTester = /-o$/;
 var twoToneTester = /-twotone$/;

@@ -158,6 +158,7 @@ var Drawer = function (_React$Component) {
                 height = _a.height,
                 rest = __rest(_a, ["zIndex", "style", "placement", "className", "wrapClassName", "width", "height"]);
             warning(wrapClassName === undefined, 'wrapClassName is deprecated, please use className instead.');
+            var haveMask = rest.mask ? "" : "no-mask";
             _this.parentDrawer = value;
             var offsetStyle = {};
             if (placement === 'left' || placement === 'right') {
@@ -170,7 +171,7 @@ var Drawer = function (_React$Component) {
                 { value: _this },
                 React.createElement(
                     RcDrawer,
-                    _extends({ handler: false }, rest, offsetStyle, { open: _this.props.visible, onMaskClick: _this.onMaskClick, showMask: _this.props.mask, placement: placement, style: _this.getRcDrawerStyle(), className: classNames(wrapClassName, className) }),
+                    _extends({ handler: false }, rest, offsetStyle, { open: _this.props.visible, onMaskClick: _this.onMaskClick, showMask: _this.props.mask, placement: placement, style: _this.getRcDrawerStyle(), className: classNames(wrapClassName, className, haveMask) }),
                     _this.renderBody()
                 )
             );
@@ -229,5 +230,6 @@ Drawer.defaultProps = {
     closable: true,
     placement: 'right',
     maskClosable: true,
+    mask: true,
     level: null
 };

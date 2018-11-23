@@ -51,6 +51,7 @@ export default class Drawer extends React.Component<DrawerProps, IDrawerState> {
         closable: boolean;
         placement: string;
         maskClosable: boolean;
+        mask: boolean;
         level: null;
     };
     readonly state: {
