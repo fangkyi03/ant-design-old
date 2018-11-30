@@ -19,7 +19,9 @@ declare class Upload extends React.Component<UploadProps, UploadState> {
         disabled: boolean;
         supportServerRender: boolean;
     };
-    static getDerivedStateFromProps(nextProps: UploadProps): any;
+    static getDerivedStateFromProps(nextProps: UploadProps): {
+        fileList: any;
+    } | null;
     recentUploadStatus: boolean | PromiseLike<any>;
     progressTimer: any;
     private upload;
