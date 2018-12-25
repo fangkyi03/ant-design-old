@@ -168,15 +168,14 @@ var Button = function (_React$Component) {
                 default:
                     break;
             }
-            var now = new Date();
-            var isChristmas = now.getMonth() === 11 && now.getDate() === 25;
-            var classes = classNames(prefixCls, className, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-' + shape, shape), _defineProperty(_classNames, prefixCls + '-' + sizeCls, sizeCls), _defineProperty(_classNames, prefixCls + '-icon-only', !children && icon), _defineProperty(_classNames, prefixCls + '-loading', loading), _defineProperty(_classNames, prefixCls + '-background-ghost', ghost), _defineProperty(_classNames, prefixCls + '-two-chinese-chars', hasTwoCNChar), _defineProperty(_classNames, prefixCls + '-block', block), _defineProperty(_classNames, 'christmas', isChristmas), _classNames));
+            // const isChristmas = now.getMonth() === 11 && now.getDate() === 25;
+            var classes = classNames(prefixCls, className, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-' + shape, shape), _defineProperty(_classNames, prefixCls + '-' + sizeCls, sizeCls), _defineProperty(_classNames, prefixCls + '-icon-only', !children && icon), _defineProperty(_classNames, prefixCls + '-loading', loading), _defineProperty(_classNames, prefixCls + '-background-ghost', ghost), _defineProperty(_classNames, prefixCls + '-two-chinese-chars', hasTwoCNChar), _defineProperty(_classNames, prefixCls + '-block', block), _classNames));
             var iconType = loading ? 'loading' : icon;
             var iconNode = iconType ? React.createElement(Icon, { type: iconType }) : null;
             var kids = children || children === 0 ? React.Children.map(children, function (child) {
                 return insertSpace(child, _this3.isNeedInserted());
             }) : null;
-            var title = isChristmas ? 'Ho Ho Ho!' : rest.title;
+            var title = rest.title;
             if ('href' in rest) {
                 return React.createElement(
                     'a',

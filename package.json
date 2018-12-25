@@ -194,7 +194,7 @@
     "lint-fix:demo": "eslint-tinker ./components/*/demo/*.md",
     "sort-api": "node ./scripts/sort-api-table.js",
     "dist": "antd-tools run dist",
-    "compile": "antd-tools run compile",
+    "build": "antd-tools run compile",
     "tsc": "tsc",
     "start": "rimraf _site && mkdir _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
     "start:preact": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=preact bisheng start -c ./site/bisheng.config.js",
