@@ -2,7 +2,6 @@ import * as React from 'react';
 import { polyfill } from 'react-lifecycles-compat';
 import RcUpload from 'rc-upload';
 import classNames from 'classnames';
-import uniqBy from 'lodash/uniqBy';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import defaultLocale from '../locale-provider/default';
 import Dragger from './Dragger';
@@ -206,19 +205,10 @@ class Upload extends React.Component<UploadProps, UploadState> {
       return true;
     }
     const result = this.props.beforeUpload(file, fileList);
-    if (result === false) {
-      this.onChange({
-        file,
-        fileList: uniqBy(
-          this.state.fileList.concat(fileList.map(fileToObject)),
-          (item: UploadFile) => item.uid,
-        ),
-      });
-      return false;
-    } else if (result && (result as PromiseLike<any>).then) {
+    if (result && (result as PromiseLike<any>).then) {
       return result;
     }
-    return true;
+    return result;
   }
 
   clearProgressTimer() {

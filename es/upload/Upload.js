@@ -9,7 +9,6 @@ import * as React from 'react';
 import { polyfill } from 'react-lifecycles-compat';
 import RcUpload from 'rc-upload';
 import classNames from 'classnames';
-import uniqBy from 'lodash/uniqBy';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 import defaultLocale from '../locale-provider/default';
 import UploadList from './UploadList';
@@ -121,18 +120,10 @@ var Upload = function (_React$Component) {
                 return true;
             }
             var result = _this.props.beforeUpload(file, fileList);
-            if (result === false) {
-                _this.onChange({
-                    file: file,
-                    fileList: uniqBy(_this.state.fileList.concat(fileList.map(fileToObject)), function (item) {
-                        return item.uid;
-                    })
-                });
-                return false;
-            } else if (result && result.then) {
+            if (result && result.then) {
                 return result;
             }
-            return true;
+            return result;
         };
         _this.saveUpload = function (node) {
             _this.upload = node;
