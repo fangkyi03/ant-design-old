@@ -26,6 +26,7 @@ export interface UploadFile {
   response?: any;
   error?: any;
   linkProps?: any;
+  urlid?: string;
   type: string;
 }
 
