@@ -165,10 +165,10 @@ export default class UploadList extends React.Component<UploadListProps, any> {
       };
       const previewIcon = showPreviewIcon ? (
         <a
-          href={file.url || file.thumbUrl}
+          href={((file.response && file.response.data && file.response.data.urlid) || file.url || file.thumbUrl) }
           target="_blank"
           rel="noopener noreferrer"
-          style={(file.url || file.thumbUrl) ? undefined : style}
+          style={((file.response && file.response.data && file.response.data.urlid) || file.url || file.thumbUrl) ? undefined : style}
           onClick={e => this.handlePreview(file, e)}
           title={locale.previewFile}
         >
