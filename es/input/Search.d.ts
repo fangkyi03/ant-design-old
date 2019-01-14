@@ -12,7 +12,7 @@ export default class Search extends React.Component<SearchProps, any> {
         enterButton: boolean;
     };
     private input;
-    onSearch: (e: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLElement>) => void;
+    onSearch: (e: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLElement, MouseEvent>) => void;
     focus(): void;
     blur(): void;
     saveInput: (node: Input) => void;

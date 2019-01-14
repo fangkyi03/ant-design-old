@@ -12,7 +12,7 @@ declare class WeekPicker extends React.Component<any, any> {
     constructor(props: any);
     weekDateRender: (current: any) => JSX.Element;
     handleChange: (value: moment.Moment | null) => void;
-    clearSelection: (e: React.MouseEvent<HTMLElement>) => void;
+    clearSelection: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     focus(): void;
     blur(): void;
     saveInput: (node: any) => void;

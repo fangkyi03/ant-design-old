@@ -114,8 +114,8 @@ export default class Modal extends React.Component<ModalProps, {}> {
         title: PropTypes.Requireable<PropTypes.ReactNodeLike>;
         closable: PropTypes.Requireable<boolean>;
     };
-    handleCancel: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    handleOk: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    handleCancel: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    handleOk: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     componentDidMount(): void;
     renderFooter: (locale: ModalLocale) => JSX.Element;
     render(): JSX.Element;

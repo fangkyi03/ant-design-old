@@ -22,11 +22,11 @@ export default class DirectoryTree extends React.Component<DirectoryTreeProps, D
     constructor(props: DirectoryTreeProps);
     componentWillReceiveProps(nextProps: DirectoryTreeProps): void;
     onExpand: (expandedKeys: string[], info: AntTreeNodeExpandedEvent) => void | PromiseLike<any>;
-    onClick: (event: React.MouseEvent<HTMLElement>, node: AntTreeNode) => void;
-    onDoubleClick: (event: React.MouseEvent<HTMLElement>, node: AntTreeNode) => void;
+    onClick: (event: React.MouseEvent<HTMLElement, MouseEvent>, node: AntTreeNode) => void;
+    onDoubleClick: (event: React.MouseEvent<HTMLElement, MouseEvent>, node: AntTreeNode) => void;
     onSelect: (keys: string[], event: AntTreeNodeSelectedEvent) => void;
     setTreeRef: (node: Tree) => void;
-    expandFolderNode: (event: React.MouseEvent<HTMLElement>, node: AntTreeNode) => void;
+    expandFolderNode: (event: React.MouseEvent<HTMLElement, MouseEvent>, node: AntTreeNode) => void;
     setUncontrolledState: (state: DirectoryTreeState) => void;
     render(): JSX.Element;
 }

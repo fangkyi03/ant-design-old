@@ -34,7 +34,7 @@ declare class Tag extends React.Component<TagProps, TagState> {
         mounted: boolean;
     };
     componentDidUpdate(_prevProps: TagProps, prevState: TagState): void;
-    handleIconClick: (e: React.MouseEvent<HTMLElement>) => void;
+    handleIconClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     close: () => void;
     show: () => void;
     animationEnd: (_: string, existed: boolean) => void;

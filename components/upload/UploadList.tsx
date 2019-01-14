@@ -165,7 +165,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
       };
       const previewIcon = showPreviewIcon ? (
         <a
-          href={((file.response && file.response.data && file.response.data.urlid) || file.url || file.thumbUrl) }
+          href={((file.response && file.response.data && (file.response.data.urlid || file.response.data.url)) || file.url || file.thumbUrl) }
           target="_blank"
           rel="noopener noreferrer"
           style={((file.response && file.response.data && file.response.data.urlid) || file.url || file.thumbUrl) ? undefined : style}

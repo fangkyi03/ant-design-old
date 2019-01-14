@@ -31,7 +31,7 @@ declare class RangePicker extends React.Component<any, RangePickerState> {
     } | null;
     private picker;
     constructor(props: any);
-    clearSelection: (e: React.MouseEvent<HTMLElement>) => void;
+    clearSelection: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     clearHoverValue: () => void;
     handleChange: (value: RangePickerValue) => void;
     handleOpenChange: (open: boolean) => void;

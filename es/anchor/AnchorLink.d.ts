@@ -21,6 +21,6 @@ export default class AnchorLink extends React.Component<AnchorLinkProps, any> {
     componentDidMount(): void;
     componentWillReceiveProps(nextProps: AnchorLinkProps): void;
     componentWillUnmount(): void;
-    handleClick: (e: React.MouseEvent<HTMLElement>) => void;
+    handleClick: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     render(): JSX.Element;
 }

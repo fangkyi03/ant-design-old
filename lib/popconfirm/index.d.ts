@@ -33,8 +33,8 @@ declare class Popconfirm extends React.Component<PopconfirmProps, PopconfirmStat
     private tooltip;
     constructor(props: PopconfirmProps);
     getPopupDomNode(): any;
-    onConfirm: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    onCancel: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    onConfirm: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    onCancel: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
     onVisibleChange: (visible: boolean) => void;
     setVisible(visible: boolean, e?: React.MouseEvent<HTMLButtonElement>): void;
     saveTooltip: (node: any) => void;

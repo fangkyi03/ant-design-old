@@ -166,7 +166,7 @@ var UploadList = function (_React$Component) {
                 };
                 var previewIcon = showPreviewIcon ? React.createElement(
                     'a',
-                    { href: file.response && file.response.data && file.response.data.urlid || file.url || file.thumbUrl, target: '_blank', rel: 'noopener noreferrer', style: file.response && file.response.data && file.response.data.urlid || file.url || file.thumbUrl ? undefined : style, onClick: function onClick(e) {
+                    { href: file.response && file.response.data && (file.response.data.urlid || file.response.data.url) || file.url || file.thumbUrl, target: '_blank', rel: 'noopener noreferrer', style: file.response && file.response.data && file.response.data.urlid || file.url || file.thumbUrl ? undefined : style, onClick: function onClick(e) {
                             return _this3.handlePreview(file, e);
                         }, title: locale.previewFile },
                     React.createElement(Icon, { type: 'eye-o' })
