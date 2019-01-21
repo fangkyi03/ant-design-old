@@ -74,7 +74,7 @@
     "rc-tabs": "~9.4.6",
     "rc-time-picker": "~3.4.0",
     "rc-tooltip": "~3.7.3",
-    "rc-tree": "~1.14.6",
+    "rc-tree": "git+https://github.com/react-component/tree.git",
     "rc-tree-select": "~2.3.1",
     "rc-trigger": "^2.6.2",
     "rc-upload": "~2.6.0",
