@@ -276,8 +276,7 @@ var FormItem = function (_React$Component) {
                 prefixCls = _props3.prefixCls,
                 label = _props3.label,
                 labelCol = _props3.labelCol,
-                colon = _props3.colon,
-                id = _props3.id;
+                colon = _props3.colon;
 
             var context = this.context;
             var required = this.isRequired();
@@ -295,7 +294,9 @@ var FormItem = function (_React$Component) {
                 _extends({}, labelCol, { className: labelColClassName, key: 'label' }),
                 React.createElement(
                     'label',
-                    { htmlFor: id || this.getId(), className: labelClassName, title: typeof label === 'string' ? label : '', onClick: this.onLabelClick },
+                    {
+                        // htmlFor={id || this.getId()}
+                        className: labelClassName, title: typeof label === 'string' ? label : '', onClick: this.onLabelClick },
                     labelChildren
                 )
             ) : null;

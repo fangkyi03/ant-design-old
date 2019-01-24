@@ -292,7 +292,7 @@ export default class FormItem extends React.Component<FormItemProps, any> {
   }
 
   renderLabel() {
-    const { prefixCls, label, labelCol, colon, id } = this.props;
+    const { prefixCls, label, labelCol, colon } = this.props;
     const context = this.context;
     const required = this.isRequired();
 
@@ -315,7 +315,7 @@ export default class FormItem extends React.Component<FormItemProps, any> {
     return label ? (
       <Col {...labelCol} className={labelColClassName} key="label">
         <label
-          htmlFor={id || this.getId()}
+          // htmlFor={id || this.getId()}
           className={labelClassName}
           title={typeof label === 'string' ? label : ''}
           onClick={this.onLabelClick}
