@@ -125,6 +125,10 @@ export default class TextArea extends React.Component<TextAreaProps, TextAreaSta
     };
     // Fix https://github.com/ant-design/ant-design/issues/6776
     // Make sure it could be reset when using form.getFieldDecorator
+    if (otherProps.disabled) {
+      delete otherProps.placeholder;
+    }
+
     if ('value' in otherProps) {
       otherProps.value = otherProps.value || '';
     }
