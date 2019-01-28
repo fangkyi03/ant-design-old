@@ -191,6 +191,10 @@ export default class Input extends React.Component<InputProps, any> {
       'suffix',
     ]);
 
+    if (otherProps.disabled) {
+      delete otherProps.placeholder;
+    }
+
     if ('value' in this.props) {
       otherProps.value = fixControlledValue(value);
       // Input elements must be either controlled or uncontrolled,

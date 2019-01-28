@@ -144,6 +144,9 @@ var Input = function (_React$Component) {
             // Fix https://fb.me/react-unknown-prop
 
             var otherProps = omit(this.props, ['prefixCls', 'onPressEnter', 'addonBefore', 'addonAfter', 'prefix', 'suffix']);
+            if (otherProps.disabled) {
+                delete otherProps.placeholder;
+            }
             if ('value' in this.props) {
                 otherProps.value = fixControlledValue(value);
                 // Input elements must be either controlled or uncontrolled,

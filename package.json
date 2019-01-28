@@ -33,6 +33,11 @@
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0"
   },
+  "files": [
+    "es",
+    "package.json",
+    "index.js"
+  ],
   "dependencies": {
     "@ant-design/icons": "~1.1.15",
     "@ant-design/icons-react": "~1.1.2",
