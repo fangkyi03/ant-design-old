@@ -1,5 +1,5 @@
 import _extends from 'babel-runtime/helpers/extends';
-import CalendarLocale from 'rc-calendar/es/locale/es_ES';
+import CalendarLocale from 'rc-calendar/lib/locale/es_ES';
 import TimePickerLocale from '../../time-picker/locale/es_ES';
 // Merge into a locale object
 var locale = {

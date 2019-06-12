@@ -1,6 +1,6 @@
 import _extends from 'babel-runtime/helpers/extends';
 import RcCalendar from 'rc-calendar';
-import MonthCalendar from 'rc-calendar/es/MonthCalendar';
+import MonthCalendar from 'rc-calendar/lib/MonthCalendar';
 import createPicker from './createPicker';
 import wrapPicker from './wrapPicker';
 import RangePicker from './RangePicker';

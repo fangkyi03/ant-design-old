@@ -1,5 +1,5 @@
 import _extends from 'babel-runtime/helpers/extends';
-import CalendarLocale from 'rc-calendar/es/locale/sv_SE';
+import CalendarLocale from 'rc-calendar/lib/locale/sv_SE';
 import TimePickerLocale from '../../time-picker/locale/sv_SE';
 var locale = {
     lang: _extends({ placeholder: 'Välj datum', rangePlaceholder: ['Startdatum', 'Slutdatum'] }, CalendarLocale),

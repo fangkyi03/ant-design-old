@@ -1,5 +1,5 @@
 import _extends from 'babel-runtime/helpers/extends';
-import CalendarLocale from 'rc-calendar/es/locale/zh_CN';
+import CalendarLocale from 'rc-calendar/lib/locale/zh_CN';
 import TimePickerLocale from '../../time-picker/locale/zh_CN';
 var locale = {
     lang: _extends({ placeholder: '请选择日期', rangePlaceholder: ['开始日期', '结束日期'] }, CalendarLocale),

@@ -1,5 +1,5 @@
 import _extends from 'babel-runtime/helpers/extends';
-import CalendarLocale from 'rc-calendar/es/locale/uk_UA';
+import CalendarLocale from 'rc-calendar/lib/locale/uk_UA';
 import TimePickerLocale from '../../time-picker/locale/uk_UA';
 var locale = {
     lang: _extends({ placeholder: 'Оберіть дату', rangePlaceholder: ['Початкова дата', 'Кінцева дата'] }, CalendarLocale),
